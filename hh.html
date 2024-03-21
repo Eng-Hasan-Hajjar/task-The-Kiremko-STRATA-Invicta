@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegpt.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+ <div class="home">
+    <div class="">
+
+        <div class="home2" style="background-color:#FFF4A3;">
+         <!--        <h1 style="text-align: right; margin-right:  50px;padding-top: 100px;">The Kiremko STRATA Invicta</h1>  
+-->  
+
+           <ul class=" ">
+            <li class=""><img class="active" src="image1.png" alt="" width="50%"></li>
+            <li class=""><img class="model__image" src="2.png" alt="" width="50%"></li>
+            <li class=""><img class="model__image" src="3.png" alt="" width="50%"></li>
+            <li class=""><img class="model__image" src="4.png" alt="" width="50%"></li>
+            <!-- Add more image list items here -->
+           </ul>
+
+           <ul class="">
+            <li class="lll" style="left: 43%; top: 38%; display: block;">
+                <div class="content-wrapper">
+                    <h1 class="pasa" style="width: 800%">The Kiremko STRATA Invicta</h1>  
+                    <h2 class="pargraph1" style="width: 800%">Full line capacity control capacity control by steam peeler</h2>
+                    <p class="pargraph1" style="width: 700%; text-justify: auto;">Intelligent system with controlled interlock restart Allows for an almost 100% uniform product feed from the steam peeler Less or no potato buffers inline required</p>
+                </div>
+            </li>
+          
+            <li class="l2" style="left: 28%; top: 63%; display: block;">
+                 <div class="content-wrapper">
+                    <!-- Add content for l2 here -->
+                </div>
+            </li>
+           
+        </ul>
+        <input type="range" id="rangeInput" name="rangeInput" min="1" max="35" value="1">
+
+        </div>
+        
+        
+       
+      </div>
+      
+</div>
+      
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.getElementById('rangeInput').addEventListener('input', function() {
+        // تحديث العرض بمجرد تغيير القيمة
+        var value = parseInt(this.value);
+        var images = document.querySelectorAll('ul > li > img');
+        images.forEach(function(image, index) {
+            if (index === value - 1) {
+                image.classList.add('active');
+            } else {
+                image.classList.remove('active');
+            }
+        });
+        // إخفاء العناصر lll و l2
+        var lll = document.querySelector('.lll');
+        var l2 = document.querySelector('.l2');
+        if (lll && l2) {
+            if (value !== 1) {
+                lll.style.display = 'none';
+                l2.style.display = 'none';
+            } else {
+                lll.style.display = 'block';
+                l2.style.display = 'block';
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
